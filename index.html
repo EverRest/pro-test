@@ -20,6 +20,10 @@
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	<style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
 </head>
 <body>
 	<header>
@@ -42,8 +46,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div id="map_canvas">
-					map
+					<div id="map">
 					</div>
 				</div>
 			</div>
@@ -53,8 +56,49 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class ="col-md-12">
-					content
+				<div class ="col-md-3">
+					<article>
+						<h3>1st step</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+				</div>
+				<div class ="col-md-3">
+					<article>
+						<h3>2nd step</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+				</div>
+				<div class ="col-md-3">
+					<article>
+						<h3>3rd step</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+				</div>
+				<div class ="col-md-3">
+					<article>
+						<h3>4th step</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
 				</div>
 			</div>
 		</div>
@@ -63,40 +107,39 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<p>Copyright &copy; 2015 design by me</p>
+					<p>copyright &copy; 2015 design by me</p>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
-	<script type="text/javascript">
-	//google maps
-	function initialize() {
-		var myLatlng = new google.maps.LatLng(-34.397, 150.644);
-		var myOptions = {
-			zoom: 8,
-			center: myLatlng,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		}
-		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-	}
-	</script>
- 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ6fTA2q2Oup1a_doMLGTFjdiiOJhjbHA&callback=initialize" type="text/javascript"></script>
-	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
-	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
-	<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
-	<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
-	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
-	<script src="libs/countdown/jquery.plugin.js"></script>
-	<script src="libs/countdown/jquery.countdown.min.js"></script>
-	<script src="libs/countdown/jquery.countdown-ru.js"></script>
-	<script src="libs/landing-nav/navigation.js"></script>
-	<script src="js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+</script>
+<script src="https://maps.googleapis.scom/maps/api/js?key=AIzaSyA0PcdcMtVaYWLLKqDp27AHGQIcgEXL6WM&callback=initMap"
+    async defer></script>
+<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="libs/countdown/jquery.plugin.js"></script>
+<script src="libs/countdown/jquery.countdown.min.js"></script>
+<script src="libs/countdown/jquery.countdown-ru.js"></script>
+<script src="libs/landing-nav/navigation.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
