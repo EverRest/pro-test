@@ -11,7 +11,7 @@
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="favicon.png" />
+	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwPwAA4B8AAOAPAADgAwAA4BkAAOAdAADwPQAA+DkAAPh7AADwMwAA4BcAAOATAADwOwAA8D8AAPM/AAD3vwAA" rel="icon" type="image/x-icon" />
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
 	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
@@ -22,12 +22,71 @@
 	<link rel="stylesheet" href="css/media.css" />
 </head>
 <body>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					logo
+				</div>
+				<div class="col-md-4">
+					search
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-bars"></i>
+					menu
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="map_canvas">
+					map
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class ="col-md-12">
+					reg
+				</div>
+			</div>
+			<div class="row">
+				<div class ="col-md-12">
+					content
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy; 2015 design by me</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
 	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+	//google maps
+	function initialize() {
+		var myLatlng = new google.maps.LatLng(-34.397, 150.644);
+		var myOptions = {
+			zoom: 8,
+			center: myLatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+	}
+	</script>
+ 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ6fTA2q2Oup1a_doMLGTFjdiiOJhjbHA&callback=initialize" type="text/javascript"></script>
 	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
 	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
 	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
@@ -39,7 +98,5 @@
 	<script src="libs/countdown/jquery.countdown-ru.js"></script>
 	<script src="libs/landing-nav/navigation.js"></script>
 	<script src="js/common.js"></script>
-	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
 </html>
