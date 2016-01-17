@@ -27,12 +27,16 @@
 	<script>
 	function initialize() {
 	  var mapProp = {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
+	    center  :new google.maps.LatLng(51.508742,-0.120850),
 	    zoom:5,
-	    mapTypeId:google.maps.MapTypeId.ROADMAP
+	    mapTypeId:google.maps.MapTypeId.HYBRID
 	  };
 	  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+	
+		 
 	}
+
+
 	google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
 </head>
@@ -49,7 +53,7 @@
 				<div class="col-md-6">
 					<i class="fa fa-bars fa-2x"></i>
 					<nav>
-						<ul>
+						<ul class="menu">
 							<li>
 								<a href="#">Add New Pet</a>
 							</li>
@@ -96,8 +100,7 @@
 				<div class ="col-md-3">
 					<article>
 						<h3>2nd step</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						quis nostrud exercitation ullamco laboris nisi uanim id est laborum.</p>
+						<p>Lorem ipsum sed do eiusmod quis nostrud exercitation ullamco laboris nisi uanim id est laborum.</p>
 					</article>
 				</div>
 				<div class ="col-md-3">
@@ -110,7 +113,7 @@
 				<div class ="col-md-3">
 					<article>
 						<h3>4th step</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodvoluptate velit esse Excepteur sint occaecat cupidatat non mollit anim id est laborum.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur cupidatat non mollit anim id est laborum.</p>
 					</article>
 				</div>
 			</div>

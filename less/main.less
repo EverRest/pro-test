@@ -26,17 +26,23 @@ body textarea:required:valid {
 body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
-	overflow:hidden;
+	/*overflow:hidden;*/
 }
-/**HEADER**/
-@color-top_header: #4e8c9a;
-@color-bottom_header: #5794a3;
+
+@color-top_header: #f1f1f1;
+@color-bottom_header: #bdbdbd;
 @color-white: #ffffff;
 @color-black: #000000;
+@color-footer: #484242;
 
+p {
+	margin: 0 auto;
+}
+
+/**HEADER**/
 
 header {
-	color: @color-white;
+	color: @color-black;
 	background: linear-gradient(to top,@color-bottom_header,@color-top_header);
 }
 
@@ -50,12 +56,35 @@ header {
 	color: @color-black;
 }
 
+.menu {
+	display: none;
+}
+
 /**END**/
 
+/**MAIN**/
+
+h1 {
+	text-align: center;
+}
 
 /**MAP**/
 .map {
 	width: 100%;
-	height: 390px;
+	height: 320px;
+	border: 1px solid @color-white;
 }
+/**END**/
+
+/**END**/
+/**FOOTER**/
+footer {
+	background-color: @color-footer;
+	color: @color-white;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+
 /**END**/
