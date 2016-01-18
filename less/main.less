@@ -53,10 +53,45 @@ header {
 .logo h3 {
 	display: block;
 	color: @color-black;
+	vertical-align: center;
+}
+
+.menu_btn {
+	margin: 5% 0;
+	float: right;
+}
+
+nav {
+	display: none;
 }
 
 .menu {
-	display: none;
+	float:right;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menu a {
+	padding: 8px;
+	display: block;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	background-color: #d6d6d6; 
+	color: @color-black;
+}
+
+.menu a:hover {
+	background-color: #d1d1d1;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.menu li {
+	display: inline-block;
+	float: left;
+	padding: 7% 0;
 }
 
 
@@ -97,5 +132,9 @@ footer {
 	width: 100%;
 	left: 0;
 	bottom: 0;
+}
+
+footer p {
+	text-align: center;
 }
 
