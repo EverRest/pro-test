@@ -20,79 +20,45 @@
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
-</head>
-<body>
+	<link rel="stylesheet" href="css/form_reg.css"/>
+	<body>
 	<header>
 		<div class="container-fluid">
 			<div >
 				<div class="col-md-6">
 					<div class="logo">
 						<img src="img/logo.png" alt="logo" />
-						<h3>We're find your pet!</h3>
+						<h3>We're will find your pet!</h3>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<i class="fa fa-bars fa-2x"></i>
-					<nav>
-						<ul class="menu">
-							<li>
-								<a href="#">Log In</a>
-							</li>					
-							<li>
-								<a href="#">Add New Pet</a>
-							</li>
-							<li>
-								<a href="#">Remove Pet</a>
-							</li>
-							<li>
-								<a href="#">
-								Special Search
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								Contact Us
-								</a>
-							</li>
-						</ul>
-					</nav>
+
 				</div>
 			</div>
 		</div>
 	</header>
 	<main>
 		<div class="container-fluid">
-
-			<div>
-				<div class ="col-md-12">
-					<h1 class ="reg">Create a free account now <a href="#">Register now</a></h1>
-				</div>
-			</div>
+			<form class="reg_form" name="spesearch" method="post" action="index.php">
+				<h2>Registration</h2>
+				<p class="stroke">Your Nickname: <input type="text" name="yncknm" /></p>
+				<p class="stroke">Your Full Name: <input type="text" name="yfn"/></p>
+				<p class="stroke">Your Email Adr : <input type="text" name="yeml"/></p>
+				<p class="stroke">Your  Phone   № : <input type="text" name="ypnmbr" /></p>
+				<p class="stroke">Your Home  Adr: <input type="text" name="ydrss" /></p>
+				<input type="submit" class="btn" value="Enter" />
+			</form>
 			<div class="border_top">
-				<div class ="col-md-3">
+				<div class ="col-md-12">
 					<article>
-						<h3>1st step</h3>
+						<h3>Our rules:</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</article>
-				</div>
-				<div class ="col-md-3">
-					<article>
-						<h3>2nd step</h3>
-						<p>Lorem ipsum sed do eiusmod quis nostrud exercitation ullamco laboris nisi uanim id est laborum.</p>
-					</article>
-				</div>
-				<div class ="col-md-3">
-					<article>
-						<h3>3rd step</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</article>
-				</div>
-				<div class ="col-md-3">
-					<article>
-						<h3>4th step</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur cupidatat non mollit anim id est laborum.</p>
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
 					</article>
 				</div>
 			</div>
@@ -123,6 +89,7 @@
 <script src="libs/countdown/jquery.countdown.min.js"></script>
 <script src="libs/countdown/jquery.countdown-ru.js"></script>
 <script src="libs/landing-nav/navigation.js"></script>
-<script src="js/common.js"></script>
+<script src="js/common.js"></script>		
 </body>
 </html>
+
