@@ -20,16 +20,15 @@
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
-	<script
-	src="http://maps.googleapis.com/maps/api/js">
-	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3yvH7hO-UA5b4W2ruz0SyAslsG8DrcQk&callback=initMap"
+  type="text/javascript"></script>
 
 	<script>
-	function initialize() {
+	function initMap() {
 	  var mapProp = {
-	    center  :new google.maps.LatLng(51.508742,-0.120850),
+	    center  : new google.maps.LatLng(51.508742,-0.120850),
 	    zoom:12,
-	    mapTypeId:google.maps.MapTypeId.HYBRID
+	    mapTypeId: google.maps.MapTypeId.TERRAIN
 	  };
 	  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 	
@@ -37,7 +36,7 @@
 	}
 
 
-	google.maps.event.addDomListener(window, 'load', initialize);
+	google.maps.event.addDomListener(window, 'load', initMap);
 	</script>
 </head>
 <body>
