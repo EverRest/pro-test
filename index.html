@@ -38,12 +38,22 @@ var marker = new google.maps.Marker({
 	position: location,
 	map: map,
 	});
+var partial = "<table>" +
+                 "<tr height='10'><td>Name:</td> <td><input type='text' id='name'/> </td> </tr>" +
+                 "<tr height='10'><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
+                 "<tr height='10'><td>Type:</td> <td><select id='type'>" +
+                 "<option value='dog' SELECTED>dog</option>" +
+                 "<option value='cat'>cat</option>" +
+                 "<option value='cat'>bird</option>" +
+                 "</select> </td></tr>" +
+                 "<tr><td></td><td><input type='button' class='btn' value='Save & Close' onclick='saveData()'/></td></tr>";
 var infowindow = new google.maps.InfoWindow({
-	content: 'Latitude: ' + location.lat() +
+	content: partial
+	/*'Latitude: ' + location.lat() +
 	'<br>Longitude: ' + location.lng() +
 	'<br>Name:' +
 	'<br>Adress:'+
-	'<br>Number:'
+	'<br>Number:'*/
 });
 	infowindow.open(map,marker);
 	}
