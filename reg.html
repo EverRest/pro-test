@@ -39,15 +39,17 @@
 	</header>
 	<main>
 		<div class="container-fluid">
-			<form class="reg_form" name="spesearch" method="post" action="index.php">
-				<h2>Registration</h2>
-				<p class="stroke">Your Nickname: <input type="text" name="yncknm" /></p>
-				<p class="stroke">Your Full Name: <input type="text" name="yfn"/></p>
-				<p class="stroke">Your Email Adr : <input type="text" name="yeml"/></p>
-				<p class="stroke">Your  Phone   № : <input type="text" name="ypnmbr" /></p>
-				<p class="stroke">Your Home  Adr: <input type="text" name="ydrss" /></p>
-				<input type="submit" class="btn" value="Enter" />
-			</form>
+			<div class="col-md-12">
+				<form class="reg_form col-md-4" name="spesearch" method="post" action="index.php">
+					<h2>Registration</h2>
+					<p class="stroke">Your Nickname: <input type="text" name="yncknm" /></p>
+					<p class="stroke">Your Full Name: <input type="text" name="yfn"/></p>
+					<p class="stroke">Your Email Adr : <input type="text" name="yeml"/></p>
+					<p class="stroke">Your  Phone   № : <input type="text" name="ypnmbr" /></p>
+					<p class="stroke">Your Home  Adr: <input type="text" name="ydrss" /></p>
+					<input type="submit" class="btn" value="Enter" />
+				</form>
+			</div>
 			<div class="border_top">
 				<div class ="col-md-12">
 					<article>
@@ -89,7 +91,7 @@
 <script src="libs/countdown/jquery.countdown.min.js"></script>
 <script src="libs/countdown/jquery.countdown-ru.js"></script>
 <script src="libs/landing-nav/navigation.js"></script>
-<script src="js/common.js"></script>		
+<script src="scripts/common.js"></script>		
 </body>
 </html>
 
