@@ -23,14 +23,33 @@
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
 function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var mapProp = {
+	center:new google.maps.LatLng(51.508742,-0.120850),
+	zoom:5,
+	mapTypeId:google.maps.MapTypeId.ROADMAP
+	};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+google.maps.event.addListener(map, 'click', function(event) {
+placeMarker(event.latLng);
+});
+
+function placeMarker(location) {
+var marker = new google.maps.Marker({
+	position: location,
+	map: map,
+	});
+var infowindow = new google.maps.InfoWindow({
+	content: 'Latitude: ' + location.lat() +
+	'<br>Longitude: ' + location.lng() +
+	'<br>Name:' +
+	'<br>Adress:'+
+	'<br>Number:'
+});
+	infowindow.open(map,marker);
+	}
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
 </script>
 </head>
 <body>
@@ -137,6 +156,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <script src="libs/countdown/jquery.countdown.min.js"></script>
 <script src="libs/countdown/jquery.countdown-ru.js"></script>
 <script src="libs/landing-nav/navigation.js"></script>
-<script src="js/common.js"></script>
+<script src="scripts/common.js"></script>
 </body>
 </html>
