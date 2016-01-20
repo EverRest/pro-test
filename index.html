@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
-<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
 function initialize() {
 var mapProp = {
@@ -69,7 +69,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 					<nav>
 						<ul class="menu">
 							<li>
-								<a href="#">Log In</a>
+								<a href="#login_form" class="fancybox">Log In</a>
 							</li>
 							<li>
 								<a href="#">Add New Pet</a>
@@ -98,7 +98,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 			</div>
 			<div>
 				<div class ="col-md-12">
-					<h1 class ="reg">Create a free account now <a class="btn" href="#">Register now</a></h1>
+					<h1 class ="reg">Create a free account now <a class="btn" href="reg.html">Register now</a></h1>
 				</div>
 			</div>
 			<div class="border_top">
@@ -140,6 +140,30 @@ google.maps.event.addDomListener(window, 'load', initialize);
 			</div>
 		</div>
 	</footer>
+	<div class="hidden">
+		<form class="form" id="login_form" name="logform" method="post" action="index.php">
+			<p>Nickname: <input type="text" name="txtname" /></p>
+			<p>Password: <input type="password" name="txtpassword"/></p>
+			<p>
+				<button class="soc_icons">
+					<i class="fa fa-2x fa-facebook-square"></i>
+				</button>
+				<button class="soc_icons">
+					<i class="fa fa-2x fa-twitter-square"></i>
+				</button>
+				<button class="soc_icons">
+					<i class="fa fa-2x fa-instagram"></i>
+				</button>
+				<button class="soc_icons">
+					<i class="fa fa-2x fa-vk"></i>
+				</button>
+				<button class="soc_icons">
+					<i class="fa fa-2x fa-linkedin-square"></i>
+				</button>
+			</p>
+			<input type="submit" class="btn" value="Enter" />
+		</form>
+	</div>
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
 <script src="libs/html5shiv/html5shiv.min.js"></script>
