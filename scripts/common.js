@@ -31,6 +31,7 @@ $(document).ready(function() {
 	var owl = $(".carousel");
 	owl.owlCarousel({
 		items : 2,
+		slideSpeed: 100,
 		autoPlay: true,
 		autoHeight: true
 	});

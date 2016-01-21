@@ -1,13 +1,14 @@
 function initialize() {
 
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      map.setCenter(pos);
- });
+  navigator.geolocation.getCurrentPosition(function(position) {
+  var pos = {
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  };
+  
+  map.setCenter(pos);
+  });
 };
 
 var mapProp = {
@@ -28,14 +29,15 @@ var marker = new google.maps.Marker({
 	});
 
 var partial = "<table>" +
-                 "<tr height='20'><td>Pets name:</td> <td><input type='text' id='name'/> </td> </tr>" +
-                 "<tr height='20'><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
-                 "<tr height='20'><td>Pets sort:</td> <td><select id='type'>" +
-                 "<option value='dog' SELECTED>dog</option>" +
-                 "<option value='cat'>cat</option>" +
-                 "<option value='cat'>bird</option>" +
-                 "</select> </td></tr>" +
-                 "<tr><td></td><td><input type='button' class='btn' value='Save & Close' onclick='saveData()'/></td></tr>";
+    "<tr height='20'><td>Pets name:</td> <td><input type='text' id='name'/> </td> </tr>" +
+    "<tr height='20'><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
+    "<tr height='20'><td>Pets sort:</td> <td><select id='type'>" +
+    "<option value='dog' SELECTED>dog</option>" +
+    "<option value='cat'>cat</option>" +
+    "<option value='bird'>bird</option>" +
+     "<option value='other'>other</option>" +
+    "</select> </td></tr>" +
+    "<tr><td></td><td><input type='button' class='btn' value='Save & Close' onclick='saveData()'/></td></tr>";
 
 var infowindow = new google.maps.InfoWindow({
 	content: partial
