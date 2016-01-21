@@ -29,9 +29,9 @@ var marker = new google.maps.Marker({
 	});
 
 var partial = "<table>" +
-    "<tr><td>Pets name:</td> <td><input type='text' id='name'/> </td> </tr>" +
+    "<tr><td>Name:</td> <td><input type='text' id='name'/> </td> </tr>" +
     "<tr><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
-    "<tr><td>Pets sort:</td> <td><select id='type'>" +
+    "<tr><td>Type:</td> <td><select id='type'>" +
     "<option value='dog' SELECTED>dog</option>" +
     "<option value='cat'>cat</option>" +
     "<option value='bird'>bird</option>" +
