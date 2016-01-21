@@ -30,7 +30,9 @@ $(document).ready(function() {
 	// http://owlgraphic.com/owlcarousel/
 	var owl = $(".carousel");
 	owl.owlCarousel({
-		items : 4
+		items : 2,
+		autoPlay: true,
+		autoHeight: true
 	});
 	owl.on("mousewheel", ".owl-wrapper", function (e) {
 		if (e.deltaY > 0) {

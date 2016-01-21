@@ -1,4 +1,5 @@
 function initialize() {
+
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -8,11 +9,13 @@ if (navigator.geolocation) {
       map.setCenter(pos);
  });
 };
+
 var mapProp = {
 	center:new google.maps.LatLng(51.508742,-0.120850),
 	zoom:12,
 	mapTypeId:google.maps.MapTypeId.ROADMAP
 	};
+
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 google.maps.event.addListener(map, 'click', function(event) {
 placeMarker(event.latLng);
@@ -33,10 +36,13 @@ var partial = "<table>" +
                  "<option value='cat'>bird</option>" +
                  "</select> </td></tr>" +
                  "<tr><td></td><td><input type='button' class='btn' value='Save & Close' onclick='saveData()'/></td></tr>";
+
 var infowindow = new google.maps.InfoWindow({
 	content: partial
 });
+
 infowindow.open(map,marker);
 }
 }
+
 google.maps.event.addDomListener(window, 'load', initialize);
