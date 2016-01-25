@@ -6,7 +6,15 @@ $(document).ready(function() {
 		$(this).next().slideToggle(500);
 	});
 
+	//.hidden panel
 
+$('.panel_btn').on('click', function(){
+  	$("#searchForm").fadeToggle(400);
+});
+
+	/*$(".panel_btn").click(function() {
+		$(".hidden_form").slideToggle(500);
+	});*/
 
 	//FancyBox
 	//http://fancybox.net/howto
@@ -14,9 +22,6 @@ $(document).ready(function() {
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
 	$(".fancybox").fancybox();
 
-	//Landing Page
-
-	$(".top_mnu").navigation();
 
 	//http://imakewebthings.com/jquery-waypoints/
 	$(".block").waypoint(function(direction) {
@@ -53,13 +58,13 @@ $(document).ready(function() {
 
 
 	//http://api.jquery.com/jquery.ajax/
-	$("form").submit(function() {
+	$("#callback").submit(function() {
 		$.ajax({
 			type: "GET",
 			url: "mail.php",
-			data: $("form").serialize()
+			data: $("#callback").serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			alert("Thanks for your attention!");
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);

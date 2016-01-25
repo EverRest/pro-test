@@ -38,10 +38,10 @@
 					<nav>
 						<ul class="menu">
 							<li>
-								<a href="#login_form" class="fancybox">Log In</a>
+								<a href="#login_form" class="fancybox"><i class="fa fa-2x fa-sign-in"></i></a>
 							</li>
 							<li>
-								<a href="#">Contact Us</a>
+								<a href="#callback" class="fancybox"><i class="fa fa-2x fa-phone"></i></a>
 							</li>
 						</ul>
 					</nav>
@@ -53,15 +53,28 @@
 		<div class="container-fluid">
 			<div >
 				<div class="col-md-12">
-
+					<form id="searchForm" class="search_form" action="search.php">
+						<p>Searching Form</p>
+						<p>
+							<input type="text" name="petsname" class="pets_name" id="petsName" placeholder=" pets name"/>
+						</p>
+						<p>
+							<span>radius:</span>
+							<input type="range" value="0" max="3000" />
+						</p>
+							<p>Description:</p>
+							<p><textarea rows="3" cols="12" name="text"></textarea>
+							</p>
+						<p>
+							<input class="btn sub" type="submit" value="Submit " />
+						</p>
+					</form>	
 					<div id="floating-panel" class="google_map_panel">
-						<h3>
-							Searching form
-						</h3>
-							<input class="btn panel_btn add_pet" type="button" value="Add pet"/>
-							<input class="btn panel_btn" type="button" value="I find it!"/>
-					</div>					 
-					<div id="googleMap" class="map"></div>
+						<input class="btn panel_btn add_pet" type="button" value="Show/Hide"/>
+					</div>			 
+					<div id="googleMap" class="map">
+
+					</div>
 				</div>
 			</div>
 			<div>
@@ -131,6 +144,20 @@
 			</p>
 			<input type="submit" class="btn" value="Enter" />
 		</form>
+
+		<form id="callback" class="form_callback" name="callbackform" method="post" action="mail.php">
+			<h3>Form for callback</h3>
+			<p>
+				<input type="text" name="name" placeholder=" your name"/>
+			</p>
+			<p>
+				<input type="text" name="phoneNumber" placeholder=" your phone number"/>
+			</p>
+			<p>
+				<input class="btn sub" type="submit" value="Call me!" />
+			</p>
+		</form>
+
 	</div>
 <!--[if lt IE 9]>
 <script src="libs/html5shiv/es5-shim.min.js"></script>
