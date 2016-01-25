@@ -3,8 +3,9 @@ $(document).ready(function() {
 
 	//.menu_btn
 	$(".menu_btn").click(function() {
-		$(this).next().slideToggle();
+		$(this).next().slideToggle(500);
 	});
+
 
 
 	//FancyBox

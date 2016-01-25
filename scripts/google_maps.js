@@ -13,16 +13,17 @@ if (navigator.geolocation) {
 
 var mapProp = {
 	center:new google.maps.LatLng(51.508742,-0.120850),
-	zoom:12,
-	mapTypeId:google.maps.MapTypeId.ROADMAP
+	zoom:14,
+	mapTypeId:google.maps.MapTypeId.HYBRID
 	};
 
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
 google.maps.event.addListener(map, 'click', function(event) {
-placeMarker(event.latLng);
+  lostMarker(event.latLng);
 });
 
-function placeMarker(location) {
+function lostMarker(location) {
 var marker = new google.maps.Marker({
 	position: location,
 	map: map,
@@ -38,14 +39,14 @@ var partial = "<table>" +
      "<option value='other'>other</option>" +
     "</select> </td></tr>" +
     "<tr><td>Radius</td><td><input type='text' id = 'radius'> </td> </tr>" +
-    "<tr><td></td><td><input type='button' class='btn' value='Save & Close' onclick='saveData()'/></td></tr>";
+    "</table>";
 
 var infowindow = new google.maps.InfoWindow({
 	content: partial
 });
 
-infowindow.open(map,marker);
-}
+  infowindow.open(map,marker);
+} 
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
