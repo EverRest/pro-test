@@ -53,17 +53,38 @@
 		<div class="container-fluid">
 			<div >
 				<div class="col-md-12">
-					<form id="searchForm" class="search_form" action="search.php">
-						<p>
+					<form id="searchForm" class="search_form" method="POST" action="search.php">
+						<h4>Add Form</h4>
+						<p><span>Name:</span>
 							<input type="text" name="petsname" class="pets_name" id="petsName" placeholder=" pets name"/>
 						</p>
 						<p>
 							<span>radius:</span>
-							<input type="range" value="0" max="3000" />
+							<input type="range" value="0" max="100" />
 						</p>
 							<p>Description:</p>
 							<p><textarea rows="3" cols="20" name="text"></textarea>
 							</p>
+						<div class="radio_panel">
+							<p>Choose the category: </p>
+							<p>
+								<label>
+									<input type="radio" name="browser" value="dog"> Dog
+								</label>
+								
+								<label>
+									<input type="radio" name="browser" value="cat"> Cat
+								</label>
+							</p>
+							<p>
+								<label>
+									<input type="radio" name="browser" value="parrot"> Bird
+								</label>
+								<label>
+									<input type="radio" name="browser" value="other"> Other
+								</label>
+							</p>
+						</div>
 						<p>
 							<input class="btn sub" type="submit" value="Submit " />
 						</p>
