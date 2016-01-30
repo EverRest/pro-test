@@ -56,13 +56,31 @@ google.maps.event.addListener(map, 'click', function(event) {
 
 function lostMarker(location) {
 
-var img ="img/icon_maps.png";
+var ico = {
+  url:"img/dog.png",
+  scaledSize: new google.maps.Size(40, 40),
+  origin: new google.maps.Point(0,0),
+  anchor: new google.maps.Point(0,0)
+};
+
+
+
+var petspic = new google.maps.Marker({
+  position: location,
+  map: map,
+  icon: ico
+  });
 
 var marker = new google.maps.Marker({
 	position: location,
 	map: map,
-  icon: img
+  icon: "img/icon_maps.png"
 	});
+
+//var pets_pic = 'img/dog.png';
+
+
+
 
 var partial = "<div class='right'>" +
     "<p>Name: " + "<span> Rex </span>" + " </p>" +
