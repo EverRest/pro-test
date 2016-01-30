@@ -55,9 +55,13 @@ google.maps.event.addListener(map, 'click', function(event) {
 });
 
 function lostMarker(location) {
+
+var img ="img/icon_maps.png";
+
 var marker = new google.maps.Marker({
 	position: location,
 	map: map,
+  icon: img
 	});
 
 var partial = "<div class='right'>" +
