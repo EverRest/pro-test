@@ -58,7 +58,7 @@ function lostMarker(location) {
 
 var ico = {
   url:"img/dog.png",
-  scaledSize: new google.maps.Size(40, 40),
+  scaledSize: new google.maps.Size(60, 60),
   origin: new google.maps.Point(0,0),
   anchor: new google.maps.Point(0,0)
 };
@@ -79,7 +79,16 @@ var marker = new google.maps.Marker({
 
 //var pets_pic = 'img/dog.png';
 
-
+var searchCircle = new google.maps.Circle({
+  strokeColor: '#34495e',
+  strokeOpacity: 0.3,
+  strokeWeight: 2,
+  fillColor: '#34495e',
+  fillopacity: 0.35,
+  map: map,
+  center: location,
+  radius: 3000
+});
 
 
 var partial = "<div class='right'>" +
