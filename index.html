@@ -56,14 +56,17 @@
 					<form id="searchForm" class="search_form" method="POST" action="search.php">
 						<h4>Add Form</h4>
 						<p><span>Name:</span>
-							<input type="text" name="petsname" class="pets_name" id="petsName" placeholder=" pets name"/>
+							<input type="text" name="petsname" class="pets_name" placeholder=" pets name"/>
+						</p>
+						<p><span>Address:</span>
+							<input type="text" name="address" class="address"  placeholder=" ... "/>
 						</p>
 						<p>
 							<span>radius:</span>
 							<input type="range" value="0" max="100" />
 						</p>
 							<p>Description:</p>
-							<p><textarea rows="3" cols="20" name="text"></textarea>
+							<p><textarea rows="3" cols="22" name="text"></textarea>
 							</p>
 						<div class="radio_panel">
 							<p>Choose the category: </p>
@@ -75,17 +78,17 @@
 								<label>
 									<input type="radio" name="browser" value="cat"> Cat
 								</label>
-							</p>
-							<p>
+
 								<label>
 									<input type="radio" name="browser" value="parrot"> Bird
 								</label>
+								
 								<label>
 									<input type="radio" name="browser" value="other"> Other
 								</label>
 							</p>
 						</div>
-						<p>
+						<p class="btn_wrapper">
 							<input class="btn sub" type="submit" value="Submit " />
 						</p>
 					</form>	
