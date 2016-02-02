@@ -1,5 +1,11 @@
-var Pet = Pet || {};
-Pet.drawMap = (function() {
+var app = new App();
+app.init();
+
+function App() {
+  var _this = this;
+  
+
+  this.init = function() {
 
   var styles = [
     {
@@ -32,16 +38,9 @@ if (navigator.geolocation) {
     lat: position.coords.latitude,
     lng: position.coords.longitude
   };
+
   map.setCenter(pos);
   });
-
-} else {
-	var pos = {
-		lat: 0,
-		lng: 0
-	};
-	map.setCenter(pos);
-	alert('Turn on browsers geolocation');
 };
 
 var mapProp = {
@@ -50,24 +49,20 @@ var mapProp = {
   mapTypeId:google.maps.MapTypeId.HYBRID,
   mapTypeControlOptions: {
   mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-}
-};
+     }
+  };
 
-this.map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var map = this.map;
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
 map.mapTypes.set('map_style', styledMap);
 map.setMapTypeId('map_style');
-})();
 
-Pet.addMarkers = function() {
+  }
+}
 
-};
+function Pet() {
+  var _this = this;
+  this.draw = function() {
 
-Pet.infoWindow = function() {
-
-};
-
-Pet.deleteMarkers = function() {
-
-};
-
+  };
+}

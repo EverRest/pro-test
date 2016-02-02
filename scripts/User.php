@@ -27,6 +27,8 @@ class User {
   }else{
      echo "Please enter username and password";
   }
+
+  $st = null;
 }
 
   public function Register( $name, $pass, $phone, $email) {
@@ -49,6 +51,7 @@ class User {
     }
 
   }
+  $st = null;
 }
 
 ?
