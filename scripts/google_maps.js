@@ -1,4 +1,9 @@
-function initialize() {
+var Pet = Pet||{};
+
+//Pet.map;
+
+
+function mapInit() {
 
   var styles = [
     {
@@ -63,8 +68,6 @@ var ico = {
   anchor: new google.maps.Point(0,0)
 };
 
-
-
 var petspic = new google.maps.Marker({
   position: location,
   map: map,
@@ -77,7 +80,6 @@ var marker = new google.maps.Marker({
   icon: "img/icon_maps.png"
 	});
 
-//var pets_pic = 'img/dog.png';
 
 var searchCircle = new google.maps.Circle({
   strokeColor: '#34495e',
@@ -106,4 +108,4 @@ var infowindow = new google.maps.InfoWindow({
 } 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', mapInit);

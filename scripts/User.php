@@ -29,9 +29,26 @@ class User {
   }
 }
 
-  public function Register() {
+  public function Register( $name, $pass, $phone, $email) {
+    if(!empty($name) && !empty($pass) && !empty($phone) && !empty($email)) {
+      $st = $this->db->prepare("select * from users where name =?");
+      $st->bindParam($name);
+      $st->execute();
+      if($st->rowCount() == 0) {
+         $st = $this->db->prepare("insert into users ( id, name, password, phone, email) values ('', name =?, password =?, phone =?, email ?=)");
+         $st->bindParam(1, $name);
+         $st->bindParam(2, $pass);
+         $st->bindParam(3, $phone);
+         $st->bindParam(4, $email);
+         $st->execute();
+      }else{
+        echo "Please use another nickname";
+      }
+    }else{
+      echo "Please entry name/pass/phone/email!";
+    }
 
   }
 }
 
-?>
+?
